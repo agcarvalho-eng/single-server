@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "loadtest": "autocannon -c 100 -d 10 -w 10 --renderStatusCodes --warmup [-c 1 -d 3 ] http://localhost:8080"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.12.0"
+  }
 }
